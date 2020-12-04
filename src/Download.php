@@ -155,7 +155,7 @@ EOF;
         $data = curl_exec($ch);
         curl_close($ch);
 
-        if (preg_match('/Content-Length: (\d+)/', $data, $matches))
+        if (preg_match('/Content-Length: (\d+)/i', $data, $matches))
             $contentLength = (int)$matches[1];
 
         return $contentLength;
